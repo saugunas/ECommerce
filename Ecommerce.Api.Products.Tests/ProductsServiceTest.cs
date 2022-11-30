@@ -23,7 +23,7 @@ namespace Ecommerce.Api.Products.Tests
 
             var dbContext = new ProductsDbcontext(options);
 
-            CreateProducts(dbContext);
+            //CreateProducts(dbContext);
 
 
             var productProfile = new ProductProfile();
@@ -52,7 +52,7 @@ namespace Ecommerce.Api.Products.Tests
 
             var dbContext = new ProductsDbcontext(options);
 
-            CreateProducts(dbContext);
+            //CreateProducts(dbContext);
 
 
             var productProfile = new ProductProfile();
@@ -81,7 +81,7 @@ namespace Ecommerce.Api.Products.Tests
 
             var dbContext = new ProductsDbcontext(options);
 
-            CreateProducts(dbContext);
+            //CreateProducts(dbContext);
 
 
             var productProfile = new ProductProfile();
@@ -99,6 +99,8 @@ namespace Ecommerce.Api.Products.Tests
             Assert.NotNull(product.ErrorMessage);
         }
 
+
+        
         private void CreateProducts(ProductsDbcontext dbContext)
         {
             for (int i = 1; i <= 10; i++)
@@ -113,6 +115,7 @@ namespace Ecommerce.Api.Products.Tests
             }
             dbContext.SaveChanges();
         }
+        
 
 
     }
